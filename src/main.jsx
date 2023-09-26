@@ -6,11 +6,18 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
+import ErrorPage from "./error-page";
+import Contact from "./routes/contact";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "contacts/:contactId",
+    element: <Contact />,
   },
 ]);
 
